@@ -4,7 +4,7 @@ module.exports = (app) => {
   var router = require("express").Router();
 
   // Check if user exist in the database for signin
-  router.get("/checkuser", users.checkuser);
+  router.post("/checkuser", users.checkuser);
 
   app.use("/", router);
 };
