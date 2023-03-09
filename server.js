@@ -50,6 +50,7 @@ app.get("/", (req, res) => {
 
 // to enable the use of routes
 require("./app/routes/tutorial.routes")(app);
+require("./app/routes/signin.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

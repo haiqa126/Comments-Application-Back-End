@@ -1,3 +1,10 @@
+//! Important information
+//In an Express application,
+// a controller.js file defines the logic for handling
+//  requests that are sent to a specific route. The routes file,
+//  on the other hand, defines the routes
+// for the application and specifies which controller function should handle each route.
+
 module.exports = (app) => {
   const comments = require("../controllers/tutorial.controller.js");
 
@@ -24,5 +31,5 @@ module.exports = (app) => {
   // // Delete all Tutorials
   // router.delete("/", tutorials.deleteAll);
 
-  app.use("/comments", router);
+  app.use("/", router);
 };

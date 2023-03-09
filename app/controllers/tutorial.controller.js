@@ -5,7 +5,7 @@ const Comment = db.Comments;
 exports.create = (req, res) => {
   // Validate request
   if (!req.body.data.text) {
-    res.status(402).send({ message: "Content can not be empty!"});
+    res.status(402).send({ message: "Content can not be empty!" });
     return;
   }
 
