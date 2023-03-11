@@ -1,5 +1,7 @@
-const db = require("../models");
-const User = db.Users; //retrieves the Comment model from the db module.
+// const db = require("../models/user.model");
+// const User = db.users;
+
+const User = require("../models/user.model");
 
 // Create and Save a new Comment
 exports.checkuser = (req, res) => {
@@ -11,11 +13,15 @@ exports.checkuser = (req, res) => {
     res.status(402).send({ message: "email and password cannot be empty" });
     return;
   }
-  console.log(req);
+
   User.findOne({ email, password })
     .then((user) => {
       console.log("whats user");
-      console.log(user);
+      console.log("whats email and password");
+      console.log(email);
+      console.log(password);
+
+      console.log(user); //??????????????????
       if (!user) {
         return res.status(404).json({ message: "User not found" });
       }
